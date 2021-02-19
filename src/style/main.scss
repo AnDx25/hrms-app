@@ -1,2 +1,7 @@
 @import "./theme";
+//Globals
+@import "./common";
+@import "./typography";
+
+//component
 @import "../components/dashboardLayout/_dashboardLayout"
