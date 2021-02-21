@@ -8,15 +8,15 @@ var recruitmentProfiles=[
         srcUrl:""
     },
     {
-        fullName:"Mary G Loicus",
-        designation:"Product Manager",
+        fullName:"Vince Jacob",
+        designation:"UI/UX Designer",
         status:"Practical Round",
         srcUrl:""
     },
     {
-        fullName:"Mary G Loicus",
-        designation:"Product Manager",
-        status:"Practical Round",
+        fullName:"Jaidev Biswas",
+        designation:"React Developer",
+        status:"final Round",
         srcUrl:""
     }
 
