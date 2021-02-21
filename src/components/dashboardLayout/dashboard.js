@@ -43,10 +43,10 @@ const DashboardLayout=({children})=>{
                 <div className="nav-container"> 
                     {
                         navLinks.map((navItem,index)=>(
-                            <Link to={navItem.link}>
+                            <Link key={index} to={navItem.link}>
                             <div key={index} className="nav-item">
                                 {navItem.icon}
-                               <label className="item-name"> {navItem.name}</label>
+                               <label key={index}className="item-name"> {navItem.name}</label>
                             </div>
                             </Link>
 
@@ -55,7 +55,7 @@ const DashboardLayout=({children})=>{
                 </div>
             </nav>
             <div className="main-container">
-                here are children
+               
                 {children}
             </div>   
            

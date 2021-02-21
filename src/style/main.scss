@@ -4,4 +4,13 @@
 @import "./typography";
 
 //component
-@import "../components/dashboardLayout/_dashboardLayout"
+@import "../components/dashboardLayout/_dashboardLayout";
+@import "../components//header/header";
+@import "../components/input/input";
+@import "../components/avatar/Avatar.scss";
+@import "../screens/home/home";
+@import "../components//whatsNew/whatsNew";
+@import "../components/calandar/calendar.scss";
+@import "../components//recruitmentProgress/recruitmentProgress";
+@import "../components/candidateProfiles/candidateProfile";
+@import "../components/hrProfile/hrProfile";

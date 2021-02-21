@@ -10,8 +10,8 @@ function Controlller() {
       <Router>
         <DashboardLayout>
         <Switch>
-          <Route exact path="/" render={(props)=>{<Home {...props}/>}}/>
-          <Route path="/recuirtment" render={(props)=>{<Recuirtment {...props}/>}}/>
+          <Route exact path="/" render={(props)=><Home {...props}/>}/>
+          <Route path="/recuirtment" render={(props)=><Recuirtment {...props}/>}/>
         </Switch>
         </DashboardLayout>
       </Router>

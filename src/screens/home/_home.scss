@@ -1,0 +1,21 @@
+.home-content
+{
+    display: flex;
+    
+}
+.home-main-content
+{
+   display: flex;
+   flex-basis: 70%;
+   margin-right: 32px;
+   flex-direction: column;
+   
+}
+.home-side-content
+{
+    display: flex;
+    flex-direction: column;
+    
+    flex-basis: 30%;
+    margin:0 16px
+}
