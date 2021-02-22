@@ -20,6 +20,7 @@ var recruitmentProfiles=[
         srcUrl:""
     }
 
+
 ]
 
 const RecruitmentProgress=()=>{

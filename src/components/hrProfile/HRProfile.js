@@ -14,9 +14,9 @@ const HRProfile=()=>{
                 </div>
             </div>
             <div className="contact-options">
-                <IoCallOutline/>
-                <GoMail/>
-                <BsThreeDots/>
+                <IoCallOutline className={"contact"}/>
+                <GoMail className={"contact"}/>
+                <BsThreeDots className={"contact"}/>
             </div>
             <hr/>
             <div className="hr-info">

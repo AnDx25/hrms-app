@@ -1,11 +1,9 @@
 import React from 'react'
-
+import Calendar from 'react-calendar'
 const Calender=()=>{
     return(
         <div className="calender-container">
-           <div className="month-year">
-                Feb,2021
-           </div>
+           <Calendar/>
         </div>
     )
 }
