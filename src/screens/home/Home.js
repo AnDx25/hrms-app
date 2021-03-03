@@ -6,6 +6,7 @@ import Header from '../../components/header/Header'
 import Calender from '../../components/calandar/Calender'
 import RecruitmentProgress from '../../components/recruitmentProgress/RecruitmentProgress'
 import HRProfile from '../../components/hrProfile/HRProfile'
+import authenticate from '../../hoc/authenticate'
 const Home=()=>{
     return(
         <div className="home">
@@ -34,4 +35,4 @@ const Home=()=>{
         </div>    
         )
 }
-export default Home
+export default authenticate(Home)

@@ -1,0 +1,29 @@
+.user-card
+{
+    display: flex;
+   align-items: center;
+   border-radius: 25px;
+   background: $hr_white;
+   padding: 25px;
+   margin-bottom: 16px;
+   border:1px solid black;
+   .user-details
+   {
+       margin-left: 16px;
+    label
+    {
+        font-size: 16px;
+        font-weight: bolder;
+        color: $hr_gray5;
+    }
+    p
+    {
+        margin:0px;
+       margin-top: 4px;
+        font-size: 8px;
+        font-weight: 600px;
+        color: $hr_gray2;
+    }
+   }
+    
+}

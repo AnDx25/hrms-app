@@ -8,6 +8,11 @@
     border-radius: 24px;
     padding: 0 8px;
     box-sizing: border-box;
+    overflow: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+   
     .recruitment-progress-header
     {
         display: flex;
@@ -32,7 +37,20 @@
         text-align: center;
         font-weight: bold;
         cursor: pointer;
+        transition: 0.1 all ease-in-out;
+        
     }
+   
+    .header-button:hover
+    {
+        background: $hr_gray1;
+        
+    }
+    .header-button:active{
+        border: none;
+        
+    }
+    
     .recruitment-progress-body
     {
         

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import CandidateProfile from '../candidateProfiles/CandidateProfile'
 var recruitmentProfiles=[
     {
@@ -18,17 +18,55 @@ var recruitmentProfiles=[
         designation:"React Developer",
         status:"final Round",
         srcUrl:""
-    }
+    },
+    {
+        fullName:"Jaidev Biswas",
+        designation:"React Developer",
+        status:"final Round",
+        srcUrl:""
+    },{
+        fullName:"Jaidev Biswas",
+        designation:"React Developer",
+        status:"final Round",
+        srcUrl:""
+    },
+    {
+        fullName:"Jaidev Biswas",
+        designation:"React Developer",
+        status:"final Round",
+        srcUrl:""
+    },
+    {
+        fullName:"Jaidev Biswas",
+        designation:"React Developer",
+        status:"final Round",
+        srcUrl:""
+    },
+
+    
+    
 
 
 ]
-
+const displayedPost=0;
 const RecruitmentProgress=()=>{
+    const [scrollable,setScroll]=useState(false)
     return(
-        <div className="recruitment-progress-container">
+        <div className="recruitment-progress-container" id="recruitment-progress-container">
+            
             <div className="recruitment-progress-header">
                 <h3 className="header-name">Recruitment Progress</h3>
-                <button className="header-button">View All</button>
+                {
+                    scrollable?<button className="header-button" id="header-button-view-less" onClick={()=>{
+                        document.getElementById("recruitment-progress-container").style.overflow="hidden"
+                        
+                        setScroll(!scrollable)}}>View Less</button>:<button className="header-button" id="header-button-view-more" onClick={()=>{
+                            document.getElementById("recruitment-progress-container").style.overflow="auto"
+                            
+                            setScroll(!scrollable)}}>View All</button>
+                }
+                
+
             </div>
             <hr/>
             <div className="recruitment-progress-body">
@@ -36,26 +74,59 @@ const RecruitmentProgress=()=>{
             <label className="designation">Designation</label>
             <label className="status">Status</label>
             </div>
+            <hr/>
             {
-                recruitmentProfiles.map((profiles)=>{
+              
+                recruitmentProfiles.map((profiles,index)=>{
+                    if(!scrollable)
+                    {
+                    if(index<3)
+                    {
                    return(
-                       <div>
+                       <div key={index}>
                        <CandidateProfile 
                        srcUrl={profiles.srcUrl}
                        fullName={profiles.fullName}
                        designation={profiles.designation}
                        status={profiles.status}
-
                        />
                        <hr/>
                        </div>
                        
                    )
+                   displayedPost+=1;
+                    }
+                }
+                else
+                {
+                    return(
+                        <div key={index}>
+                        <CandidateProfile 
+                        srcUrl={profiles.srcUrl}
+                        fullName={profiles.fullName}
+                        designation={profiles.designation}
+                        status={profiles.status}
+                        />
+                        <hr/>
+                        </div>
+                        
+                    )
+                    setScroll(false)
+                }
                 })
             }
             <div className="recruitment-progress-footer">
                 <span id="footer1">Showing 3 out of 3 results</span>
-                <a id="footer2" href="#">View All</a>
+                {
+                    scrollable?<a id="footer2" href="#" onClick={()=>{
+                        document.getElementById("recruitment-progress-container").style.overflow="hidden"
+                        
+                        setScroll(!scrollable)}}>View Less</a>:<a id="footer2" href="#" onClick={()=>{
+                            document.getElementById("recruitment-progress-container").style.overflow="auto"
+                            
+                            setScroll(!scrollable)}}>View All</a>
+                }
+                
             </div>
         </div>
     )

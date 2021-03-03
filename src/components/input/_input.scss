@@ -32,6 +32,7 @@
     }
     
 }
+
 .hover-action
     {
         transition: 0.3s all ease-in-out;
@@ -57,3 +58,12 @@
             }
         }   
     }
+.input-error
+{
+    color: $hr_error;
+    font-size: 12px;
+    text-align: right;
+    margin: 0px;
+    margin-top: 4px;
+
+}
